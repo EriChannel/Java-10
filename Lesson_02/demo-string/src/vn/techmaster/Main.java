@@ -1,5 +1,8 @@
 package vn.techmaster;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -58,6 +61,14 @@ public class Main {
 
         String rs = temp.toUpperCase() + s.substring(1).toLowerCase();
         System.out.println(rs);
+
+        Season muaDong = Season.WINTER;
+        System.out.println(muaDong);
+
+        Month thangHai = Month.FEBRUARY;
+        System.out.println(thangHai);
+
+
 
     }
 }
