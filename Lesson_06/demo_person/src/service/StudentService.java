@@ -43,5 +43,20 @@ public class StudentService {
         return s;
     }
 
+    //Tính điểm trung bình, truyền hai tham số tương ứng với 2 loại điểm
+    public float avg(float theoryPoint, float practicalPoint){
+        return (theoryPoint+practicalPoint)/2;
+    }
+
+
+    //In dữ liệu ra màn hình
+    //Truyền tham số là một đối tượng Student để biết mình muốn in thông tin học sinh nào
+    public void output(Student s){
+        System.out.println(s.id + " - " + s.name + " - " + s.theoryPoint
+                + " - " + s.practicalPoint + " - " + avg(s.theoryPoint, s.practicalPoint));
+
+        //Bổ sung avg() và đưa hai tham số là hai loại điểm
+    }
+
 
 }

@@ -18,10 +18,14 @@ public class App {
 //        System.out.println(s2);
 
         //Sử dụng class StudentService
-//        StudentService service = new StudentService();
-//        Student s3 = service.createStudent();
-//        System.out.println(s3);
+        StudentService service = new StudentService();
+        //Tạo đối tượng Student
+        Student s3 = service.createStudent();
+        //In thông tin đối tượng vừa tạo ra màn hình
+        service.output(s3);
 
+
+        //Sử dụng mảng để quản lý danh sách học viên
         Student[] arrStudent = new Student[3];
         Student s = new Student(1, "Ngọc", 8,8);
         arrStudent[0] = s;
