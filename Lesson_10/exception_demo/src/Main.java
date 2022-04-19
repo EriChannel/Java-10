@@ -12,7 +12,7 @@ public class Main {
 //            System.out.println("Bạn đang chia một số cho 0");
 //        }
 
-//        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 //        boolean flag = true;
 //        while (flag){
 //            try {
@@ -36,6 +36,21 @@ public class Main {
         float result = bmi.bmiCalculator();
         System.out.println("Chỉ số bmi của bạn là: " + result);
 
+
+//        boolean flag = true;
+//        while (flag){
+//            try {
+//                System.out.println("Nhập số phần tử: ");
+//                int n = Integer.parseInt(sc.nextLine());
+//                int[] arr = new int[n];
+//                flag = false;
+//            }catch (NumberFormatException e){
+//                System.out.println("Nhập sai kiểu dữ liệu");
+//                System.out.println(e.toString());
+//            }catch (NegativeArraySizeException e){
+//                System.out.println("Kích thước mảng không được âm");
+//            }
+//        }
 
     }
 }

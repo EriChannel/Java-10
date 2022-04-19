@@ -1,3 +1,4 @@
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class BMI {
@@ -19,13 +20,21 @@ public class BMI {
         while (flag){
             try {
                 number = Float.parseFloat(sc.nextLine());
+                if(number <= 0) throw new CustomException("Dữ liệu bạn nhập phải lớn hơn 0");
+
                 flag = false;
             }catch (NumberFormatException e){
                 System.out.println("Nhập sai dữ liệu, vui long nhập lại: ");
+            }catch (CustomException e){
+                System.out.println(e.getMessage());
+                System.out.println("Vui long nhập lại");
             }
         }
 
         return number;
     }
+
+
+
 
 }

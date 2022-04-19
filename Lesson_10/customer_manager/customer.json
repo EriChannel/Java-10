@@ -1,0 +1,31 @@
+[{
+  "id": 1,
+  "first_name": "Harlene",
+  "last_name": "Marrington",
+  "email": "hmarrington0@mozilla.com",
+  "gender": "Female"
+}, {
+  "id": 2,
+  "first_name": "Wit",
+  "last_name": "Ragbourn",
+  "email": "wragbourn1@github.com",
+  "gender": "Genderfluid"
+}, {
+  "id": 3,
+  "first_name": "Junina",
+  "last_name": "Oneill",
+  "email": "joneill2@edublogs.org",
+  "gender": "Female"
+}, {
+  "id": 4,
+  "first_name": "Albertina",
+  "last_name": "Kinnier",
+  "email": "akinnier3@google.es",
+  "gender": "Female"
+}, {
+  "id": 5,
+  "first_name": "Britta",
+  "last_name": "Aris",
+  "email": "baris4@abc.net.au",
+  "gender": "Female"
+}]
