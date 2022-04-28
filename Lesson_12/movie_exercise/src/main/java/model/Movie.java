@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import util.Ulti;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -30,7 +31,7 @@ public class Movie {
                 ", category=" + Arrays.toString(category) +
                 ", director='" + director + '\'' +
                 ", length=" + length +
-                ", release=" + release +
+                ", release=" + Ulti.formatDate(release) +
                 ", view=" + view +
                 '}';
     }
