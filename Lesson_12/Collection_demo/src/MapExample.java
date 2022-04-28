@@ -4,10 +4,10 @@ import java.util.Map;
 public class MapExample {
     public static void main(String[] args) {
         HashMap<Integer, String> hashMap = new HashMap<>();
-        hashMap.put(10,"Ngọc");
+        hashMap.put(1,"Ngọc");
         hashMap.put(3,"Linh");
-        hashMap.put(14,"Ánh");
-        hashMap.put(20,"Hoa");
+        hashMap.put(4,"Ánh");
+        hashMap.put(5,"Hoa");
         hashMap.put(2,"Tùng");
 
         System.out.println(hashMap);
