@@ -9,7 +9,7 @@ public class ArrayDemo<E> {
         //showIArr(iArr);
         showArr(iArr);
 
-        
+
         Double[] dArr = {1.3 , 4.5, 9d, 3.4};
         showArr(dArr);
     }
