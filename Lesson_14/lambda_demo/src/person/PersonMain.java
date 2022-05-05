@@ -30,5 +30,8 @@ public class PersonMain {
 
         people.forEach(p -> System.out.println(p.getName()+" - " + p.getAge() + " - " +p.getAddress()));
 
+        people.stream().sorted((p1, p2) -> {
+            return p1.getAge()-p2.getAge();
+        }).forEach(p -> System.out.println(p.getName()+" - " + p.getAge() + " - " +p.getAddress()));
     }
 }

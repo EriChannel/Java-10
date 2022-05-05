@@ -20,7 +20,9 @@ public class StreamAPIExample {
         }
         System.out.println();
 
-        list.stream().filter(i -> i%2==0).forEach(i-> System.out.print(i+"\t"));
+        list.stream()
+                .filter(i -> i%2==0)
+                .forEach(i-> System.out.print(i+"\t"));
 
         long count = list.stream().filter(i->i%2==0).count();
         System.out.println("Số phần tử chẵn: " + count);
