@@ -74,10 +74,61 @@ public class EmployeeService {
                 list.add(new Employee(id, fullName, dob, gender1, mobile, address,
                         status, createAt, position));
             }
+
+            conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return  list;
+    }
+
+    public void addEmployee(){
+        Connection conn = connectJDBC.connect();
+
+        String query = "INSERT INTO `employee`(`id`, `full_name`, `dob`, `gender`, `mobile`, `address`, `status`, `create_at`, `position`) " +
+                "VALUES (123456789,'Ngọc','1996-08-19','female','0123456789','Hà Giang','active',NOW(),'Nhân viên')";
+
+        try {
+            Statement stm = conn.createStatement();
+            int row = stm.executeUpdate(query);
+            if(row != 0){
+                System.out.println("Thêm thành công");
+            }
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void addEmployee(Employee employee){
+        Connection conn = connectJDBC.connect();
+
+        String query = "INSERT INTO `employee`(`id`, `full_name`, `dob`, `gender`, `mobile`, `address`, `status`, `create_at`, `position`) " +
+                "VALUES (?,?,?,?,?,?,?,NOW(),?)";
+
+        try {
+            PreparedStatement stm = conn.prepareStatement(query);
+
+            stm.setInt(1, employee.getId());
+            stm.setString(2, employee.getFullName());
+            stm.setDate(3, employee.getDob());
+            stm.setString(4, employee.getGender());
+            stm.setString(5, employee.getMobile());
+            stm.setString(6, employee.getAddress());
+            stm.setString(7, employee.getStatus());
+            stm.setString(8, employee.getPosition());
+
+            int row = stm.executeUpdate();
+            if(row != 0){
+                System.out.println("Thêm thành công");
+            }
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void show(ArrayList<Employee> list){
