@@ -4,6 +4,7 @@ import model.Category;
 import model.Product;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ProductService {
 
@@ -74,5 +75,28 @@ public class ProductService {
             }
         }
         return listByPrice;
+    }
+
+    public void findName(ArrayList<Product> list){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("nhập tên bạn muốn tìm: ");
+        String ten=scanner.nextLine();
+        boolean t=false;
+        for(Product p:list){
+            String[] array=p.getName().split(" ");
+            t=false;
+            for(int k=0;k<array.length;k++){
+                for(int i=0;i<p.getName().length();i++){
+                    for(int j=i+1;j<p.getName().length();j++){
+                        if(array[k].substring(i,j).equalsIgnoreCase(ten)){
+                            System.out.println(p.toString());
+                            t=true;
+                        }
+                    }
+                    if(t==true){break;}
+                }
+            }
+
+        }
     }
 }

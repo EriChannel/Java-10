@@ -20,5 +20,10 @@ public class Main {
         //listByCategory.forEach(i-> System.out.println(i));
         ArrayList<Product> listByPrice = service.getProductByPrice(listByCategory, 2000000, 4000000);
         listByPrice.forEach(i-> System.out.println(i));
+
+        service.findName(list);
     }
 }
+
+
+//Cho một mảng số nguyên từ 1 đến 1000, tìm số 999
