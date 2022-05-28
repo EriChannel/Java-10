@@ -134,4 +134,26 @@ public class EmployeeService {
     public void show(ArrayList<Employee> list){
         list.forEach(i -> System.out.println(i));
     }
+
+
+    public void updateEmployee(int id, String newPosition){
+        Connection conn = connectJDBC.connect();
+        String query = "UPDATE `employee` SET `position`= ? WHERE id = ?";
+        try {
+            PreparedStatement pstm = conn.prepareStatement(query);
+
+            pstm.setInt(2, id);
+            pstm.setString(1, newPosition);
+
+            pstm.executeUpdate();
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteEmployee(int id){
+        
+    }
 }
